@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:focus {
+    outline-color: $color-link;
+  }
+}
+
+html {
+	font-size: calc(16px + 6 * ((100vw - 320px) / 1900));
+  height: 100%;
+}
+
+body {
+	margin: 0;
+  padding: 0;
+  color: $color-text;
+  background: $color-background;
+
+  font-family: $main;
+  line-height: 1.4;
+
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+
+  &:before, &:after {
+    content: "";
+    position: fixed;
+    background: #000;
+    left: 0;
+    right: 0;
+    height: 10px;
+  }
+  &:before {
+      top: 0;
+  }
+  &:after {
+      bottom: 0;
+  }
+  border-left: 10px solid #000;
+  border-right: 10px solid #000;
+  min-height: 100%;
+}
+
+p {
+  max-width: 30.8rem;
+  position: relative;
+}
+
+.lead {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: $color-link;
+  &:hover {
+    color: inherit;
+
+    img {
+      opacity: 0.8;
+    }
+  }
+}
+
+.gallery {
+  @extend %no-list;
+  li {
+    display: inline-block;
+  }
+  a {
+    color: inherit;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

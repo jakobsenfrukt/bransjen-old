@@ -1,0 +1,15 @@
+
+$main: sans-serif;
+$secondary: 'roboto mono', monospace;
+
+$color-background: white;
+$color-text: black;
+$color-link: crimson;
+
+$sm: 800px;
+
+%no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
