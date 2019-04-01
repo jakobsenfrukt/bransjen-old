@@ -36,5 +36,16 @@ export default new Router({
       name: 'sketchbook',
       component: () => import('./views/Sketchbook.vue')
     },
-  ]
+  ],
+  scrollBehavior (to) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        if (to.hash) {
+          resolve({ selector: to.hash })
+        } else {
+          resolve({ x: 0, y: 0 })
+        }
+      }, 100)
+    })
+  },
 })
